@@ -22,7 +22,7 @@ FROM sys.tables AS T
 	INNER JOIN
 		sys.allocation_units AS a
 			ON p.PARTITION_ID = a.CONTAINER_ID
-	WHERE t.NAME NOT LIKE 'dt%'
+WHERE t.NAME NOT LIKE 'dt%'
 GROUP BY  s.NAME, 
 					t.NAME
 ORDER BY 	DataSpaceGB DESC;	
